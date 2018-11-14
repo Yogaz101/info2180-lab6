@@ -2,15 +2,15 @@ window.onload=function(){
     var button=document.getElementById("search");
     var text=document.getElementById("lookup");
     
-    button.onclick=function(){
-        console.log('Search button Clicked')
+    function test(){
+        button.addEventListener("click",function(){
         var httpRequest=new XMLHttpRequest();
         var url="request.php?q="+ text.value;
         httpRequest.onreadystatechange=function(){
             if(httpRequest.readyState===XMLHttpRequest.DONE){
                 if(httpRequest.status===200){
-                    var response=httpRequest.responseText;
-                    document.getElementById("result").innerHTML=response;
+                    var found=httpRequest.responseText;
+                    document.getElementById("result").innerHTML=found;
                 }
                 else{
                     alert('There was a problem with the request.');
@@ -19,5 +19,9 @@ window.onload=function(){
         };
         httpRequest.open('GET',url);
         httpRequest.send();
+            });
+        
     };
+    
+    
 }
