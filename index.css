@@ -1,0 +1,31 @@
+.title{
+    background-color: yellow;
+    padding: 30px;
+    margin-bottom: 10px;
+}
+
+.content{
+    background-color: red;
+    height: 500px;
+    padding-top: 5px;
+}
+
+.description{
+    color: white;
+    font-family:Serif;
+    margin-left: 30px;
+}
+
+.searchbox{
+    height: 50px;
+    margin-left: 30px;
+}
+
+.buttonS{
+    height: 60px;
+    font-size: 25px;
+}
+
+input { font-size: 25px; 
+    
+}
